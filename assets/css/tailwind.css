@@ -73,3 +73,19 @@ body {
   @apply text-sm pt-5;
   font-family: 'Inter';
 }
+
+.doc code{
+  font-size: 1rem; /** Make it the same size as the body text  */
+}
+
+.doc aside{
+  @apply bg-base-200;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 0.25rem 0rem;
+  border-left: 1rem solid rgb(100,118,138); /** Accent border  */
+}
+
+.doc table{
+  margin: 1rem 0rem;
+  border-left: 1rem solid rgb(100,118,138); /** Accent border  */
+}
