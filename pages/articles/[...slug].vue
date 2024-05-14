@@ -34,6 +34,10 @@
 
 import "~/assets/css/articles.css"
 
+definePageMeta({
+  layout: 'guest'
+})
+
 const route = useRoute()
 
 const content = await queryContent(route.path).findOne()
