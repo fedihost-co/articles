@@ -31,9 +31,8 @@
 
 
 <script setup>
-// definePageMeta({
-//     layout: 'guest'
-// })
+
+import "~/assets/css/articles.css"
 
 const route = useRoute()
 
