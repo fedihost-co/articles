@@ -10,19 +10,23 @@
       <div class="hidden md:divider md:divider-horizontal p-0 m-0"></div>
 
       <div class="doc flex flex-col bg-base-100 w-full rounded-sm overflow-y-scroll">
-        <div class="md:hidden">
-          <div class="menu px-0 bg-base-100 py-3 grid grid-cols-3 w-full">
-            <ArticleMenu v-for="item in navigation[0].children" :data="item" class="flex shrink" />
+        <div class="md:hidden pt-2">
+          <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+          <div class="drawer-side z-[900]">
+            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu bg-base-100 text-base-content min-h-full w-80 p-4">
+              <ul class="menu bg-base-100 py-3 shrink rounded-sm content-center md:visible">
+                <ArticleMenu v-for="item in navigation[0].children" :data="item" />
+              </ul>
+            </ul>
           </div>
+          <label for="my-drawer" class="btn btn-ghost drawer-button text-left m-0 p-0">
+            <Bars3Icon class="inline-block h-8" /> Menu
+          </label>
+
           <div class="divider m-0"></div>
         </div>
         <ContentDoc class="flex flex-col w-full py-5" />
-        <!-- <div class="md:hidden">
-          <div class="divider m-0"></div>
-          <div class="menu px-0 bg-base-100 py-3 grid grid-cols-3 pb-32">
-            <ArticleMenu v-for="item in navigation[0].children" :data="item" class="flex shrink" />
-          </div>
-        </div> -->
       </div>
 
     </div>
@@ -33,6 +37,8 @@
 <script setup>
 
 import "~/assets/css/articles.css"
+
+import { Bars3Icon } from '@heroicons/vue/24/outline';
 
 definePageMeta({
   layout: 'guest'
