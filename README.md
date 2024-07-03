@@ -1,6 +1,8 @@
 # Fedihost - Articles
 Here you will find all the articles published on [fedihost.co](https://fedihost.co/articles)
 
+## STAGING WEBSITE
+### [articles.staging.fedihost.co](https://articles.staging.fedihost.co/articles/)
 
 ### Installation
 
