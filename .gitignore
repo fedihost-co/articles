@@ -18,6 +18,9 @@ build/
 
 .nuxt/
 
+dist
+.output
+
 # Logs
 logs/
 *.log

@@ -1,13 +1,25 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  ssr: false,
+  ssr: true,
 
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/sitemap'
   ],
+
+
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/sitemap.xml", '/articles'],
+      failOnError: false
+    },
+  },
+
 
   plugins: [
     // '~/plugins/gettext.js',
@@ -22,6 +34,19 @@ export default defineNuxtConfig({
   site: {
    url: 'https://articles.staging.fedihost.co',
  },
+
+   router: {
+    options: {
+      strict: false,
+    }
+  },
+
+  routeRules: {
+    '/': {ssr: false},
+    '/**': {ssr: true},
+    '/articles': { sitemap: { changefreq: 'daily'} },
+    '/articles/**': { sitemap: { changefreq: 'daily' } },
+  },
 
   content: {
     api: {
