@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   ],
 
   site: {
-   url: 'https://fedihost.co',
+   url: 'https://articles.staging.fedihost.co',
  },
 
   content: {
