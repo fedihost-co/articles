@@ -2,11 +2,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
     '@nuxtjs/google-fonts',
   ],
+
   plugins: [
     // '~/plugins/gettext.js',
     // '~/plugins/stripe.js',
@@ -17,9 +19,9 @@ export default defineNuxtConfig({
     { path: '~/components/content', extensions: ['vue'] },
   ],
 
-   site: {
-    url: 'https://fedihost.co',
-  },
+  site: {
+   url: 'https://fedihost.co',
+ },
 
   content: {
     api: {
@@ -40,8 +42,6 @@ export default defineNuxtConfig({
     viewer: true,
   },
 
-
-
   googleFonts: {
     families: {
       Roboto:  {
@@ -53,4 +53,5 @@ export default defineNuxtConfig({
     }
   },
 
+  compatibilityDate: '2024-07-03',
 })
