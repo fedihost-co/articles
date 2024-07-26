@@ -33,7 +33,7 @@ useSeoMeta({
   ogTitle: route.name.charAt(0).toUpperCase() + route.name.slice(1),
   description: "Your one stop shop for fediverse hosting!",
   ogDescription: "Your one stop shop for fediverse hosting!",
-  ogImage: 'https://fedihost.co/logoSimple.png',
+  ogImage: 'https://fedihost.co/logoSimpleFill.png',
   twitterCard: 'summary_large_image',
 })
 

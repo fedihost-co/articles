@@ -59,7 +59,7 @@ useSeoMeta({
   ogTitle: content.title || 'fedihost',
   description: content.title || "Your one stop shop for fediverse hosting!",
   ogDescription: content.title || "Your one stop shop for fediverse hosting!",
-  ogImage: 'https://fedihost.co/logoSimple.png',
+  ogImage: 'https://fedihost.co/logoSimpleFill.png',
   twitterCard: 'summary_large_image',
 })
 
