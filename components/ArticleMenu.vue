@@ -1,11 +1,7 @@
 <template>
-    <div class="overflow-hidden">
-        <!-- <div class="divider w-full m-2 p-0"></div> -->
-        <br />
+    <div class="overflow-hidden pt-4">
         <section class="">
             <span v-if="children" class="header text-lg">{{data.title}}</span>
-            <router-link :class="classObject(data)" class="text-lg text hover:underline" :to="data._path"
-                v-if="!children"> {{ data.title }}</router-link>
             <div class="flex flex-col">
                 <RouterLink :class="classObject(child)" :to="child._path" v-for="child in children"
                     class="text-lg hover:underline" :key="child.title">{{ child.title }}</RouterLink>
